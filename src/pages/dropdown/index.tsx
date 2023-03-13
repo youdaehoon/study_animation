@@ -1,7 +1,12 @@
 import React from "react";
+import FirstDropdown from "./component/First";
 
-const Dropdown: React.FC = () => {
-  return <div>드롭다운</div>;
+const PageDropdown: React.FC = () => {
+  return (
+    <div>
+      <FirstDropdown />
+    </div>
+  );
 };
 
-export default Dropdown;
+export default PageDropdown;
