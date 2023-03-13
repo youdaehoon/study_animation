@@ -1,5 +1,5 @@
 import React from "react";
-import Dropdown from "../dropdown";
+import Dropdown from "./dropdown";
 
 const FirstDropdown = () => {
   const [dropdownVisibility, setDropdownVisibility] = React.useState(false);
