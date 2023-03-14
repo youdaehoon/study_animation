@@ -10,6 +10,7 @@
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
   animation: service_03 0.8s 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  z-index: 3;
   /* opacity: 0; */
 }
 
