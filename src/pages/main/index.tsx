@@ -6,6 +6,7 @@ const Main: React.FC = () => {
   return (
     <div>
       <button onClick={() => navigate("/dropdown")}>드롭다운</button>
+      <button onClick={() => navigate("/onload")}>온로드</button>
     </div>
   );
 };

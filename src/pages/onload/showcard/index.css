@@ -1,0 +1,47 @@
+.showcard-container {
+  position: absolute;
+  right: 5rem;
+  top: 16.2rem;
+
+  width: 300px;
+
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+  animation: service_03 0.8s 0.4s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+  /* opacity: 0; */
+}
+
+.showcard-container > img {
+  height: 276px;
+}
+
+.showcard-container > div {
+  height: 48px;
+}
+
+.showcard-container > div span {
+  display: inline-block;
+
+  font-size: 14px;
+  font-weight: 400;
+  color: #959595;
+  letter-spacing: -0.07em;
+  text-align: center;
+}
+.showcard-container > div > div {
+  padding: 0px 20px;
+}
+
+@keyframes service_03 {
+  0% {
+    transform: translateY(-24rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
