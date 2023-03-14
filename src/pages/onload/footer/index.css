@@ -1,0 +1,29 @@
+.onload-footer-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  overflow: hidden;
+
+  position: absolute;
+  bottom: 5rem;
+}
+
+.onload-footer-container img {
+  width: 420px;
+  height: 300px;
+
+  margin: 0 1rem;
+}
+
+@keyframes drop3 {
+  0% {
+    transform: translateY(20rem);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
