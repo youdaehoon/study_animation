@@ -1,0 +1,43 @@
+.obeserver-onload-card-container {
+  display: inline-block;
+  padding: 2.7rem 3rem 2.6rem 3rem;
+  background: #fff;
+  border-radius: 3rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.1);
+}
+
+.obeserver-onload-card-container > span {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: #353535;
+  letter-spacing: -0.05em;
+  line-height: 2.6rem;
+  display: inline-block;
+  vertical-align: top;
+  max-width: 33rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.obeserver-onload-card-container .date {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #ccc;
+  letter-spacing: -0.05em;
+  line-height: 2.6rem;
+  display: block;
+}
+
+.obeserver-onload-card-container .reply {
+  font-size: 1.3rem;
+  font-weight: 300;
+  color: #fa4c4c;
+  letter-spacing: -0.05em;
+  line-height: 2.6rem;
+  margin-left: 1rem;
+}
+
+.obeserver-onload-card-container .reply-pendding {
+  color: #858585 !important;
+}
