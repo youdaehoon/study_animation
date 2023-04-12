@@ -1,6 +1,7 @@
 .typing {
   font-size: 1rem;
   display: inline;
+
   /* border-right: 2px solid black; */
   animation: typingCursor 0.55s ease-in-out 0ms infinite;
 }
@@ -10,7 +11,7 @@
 }
 .magnify-1 {
   animation-name: magnify;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -20,7 +21,7 @@
 }
 .magnify {
   animation-name: magnify;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;

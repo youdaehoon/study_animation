@@ -9,9 +9,11 @@ const Second = () => {
   const [signal, setSignal] = React.useState<"plus" | "minus">("plus");
   const magniftRef = React.useRef<HTMLSpanElement>(null);
 
+  React.useLayoutEffect(() => {
+    magniftRef.current?.classList.add("magnify");
+  }, [text]);
   React.useEffect(() => {
     console.log("useeffect");
-    magniftRef.current?.classList.add("magnify");
     const interval = setInterval(() => {
       console.log("interver");
 
@@ -35,7 +37,7 @@ const Second = () => {
           setCount(count - 1);
         }
 
-        magniftRef.current?.classList.remove("magnify");
+        // magniftRef.current?.classList.remove("magnify");
         return result;
       });
       //   setCount(count + 1);
@@ -51,7 +53,12 @@ const Second = () => {
       <span>{text.substring(0, text.length - 1)}</span>
 
       {text[text.length - 1] !== "" && (
-        <span ref={magniftRef}>{text[text.length - 1]}</span>
+        <span
+          ref={magniftRef}
+          onAnimationEnd={(e) => e.currentTarget.classList.remove("magnify")}
+        >
+          {text[text.length - 1]}
+        </span>
       )}
     </div>
   );

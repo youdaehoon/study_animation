@@ -8,13 +8,15 @@ const Third = () => {
   const [signal, setSignal] = React.useState<"plus" | "minus">("plus");
   const magniftRef = React.useRef<HTMLSpanElement>(null);
 
-  React.useEffect(() => {
-    console.log("useeffect");
+  React.useLayoutEffect(() => {
     if (signal === "plus") {
       magniftRef.current?.classList.add("magnify");
     } else {
       magniftRef.current?.classList.add("zoom-out");
     }
+  }, [text]);
+  React.useEffect(() => {
+    console.log("useeffect");
 
     const interval = setInterval(() => {
       console.log("interver");
@@ -39,8 +41,6 @@ const Third = () => {
           setCount(count - 1);
         }
 
-        magniftRef.current?.classList.remove("magnify");
-        magniftRef.current?.classList.remove("zoom-out");
         return result;
       });
       //   setCount(count + 1);
@@ -55,7 +55,15 @@ const Third = () => {
       <span>{text.substring(0, text.length - 1)}</span>
 
       {text[text.length - 1] !== "" && (
-        <span ref={magniftRef}>{text[text.length - 1]}</span>
+        <span
+          onAnimationEnd={(e) => {
+            e.currentTarget.classList.remove("magnify");
+            e.currentTarget.classList.remove("zoom-out");
+          }}
+          ref={magniftRef}
+        >
+          {text[text.length - 1]}
+        </span>
       )}
     </div>
   );
