@@ -1,0 +1,66 @@
+.typing {
+  font-size: 1rem;
+  display: inline;
+  /* border-right: 2px solid black; */
+  animation: typingCursor 0.55s ease-in-out 0ms infinite;
+}
+.typing-container h6 {
+  font-weight: 100;
+  max-width: 500px;
+}
+.magnify-1 {
+  animation-name: magnify;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  color: blue;
+  display: inline-block;
+}
+.magnify {
+  animation-name: magnify;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  color: blue;
+  display: inline-block;
+}
+.zoom-out {
+  animation-name: zoom_out;
+  animation-duration: 1s;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
+  /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
+  color: blue;
+  display: inline-block;
+}
+@keyframes zoom_out {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+
+@keyframes typingCursor {
+  from {
+    border-right: 2px solid white; /* 처음 border-right 속성 */
+  }
+  to {
+    border-right: 2px solid black; /* 변경할 border-right 속성 */
+  }
+}
+
+@keyframes magnify {
+  0% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

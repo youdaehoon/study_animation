@@ -8,6 +8,7 @@ const Main: React.FC = () => {
       <button onClick={() => navigate("/dropdown")}>드롭다운</button>
       <button onClick={() => navigate("/onload")}>온로드</button>
       <button onClick={() => navigate("/observer")}>옵저버</button>
+      <button onClick={() => navigate("/typing")}>타이핑</button>
     </div>
   );
 };
