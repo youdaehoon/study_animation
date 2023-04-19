@@ -1,0 +1,61 @@
+.button-container {
+  position: relative;
+  display: block;
+}
+
+.button-container > div {
+  position: absolute;
+}
+.button-container > div {
+  width: 1.75rem;
+  height: 0.5rem;
+  transform: scale3d(0.5, 0.5, 0.5);
+}
+.button-container > div::before {
+  left: 0px;
+  transform: skew(0deg, 30deg);
+}
+.button-container > div::after {
+  right: 0px;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+.button-container > div:first-child {
+  animation: 3s ease-out 1s infinite normal none running test;
+}
+.button-container > div:nth-child(2) {
+  animation: 3s ease-out 2s infinite normal none running test;
+}
+.button-container > div:nth-child(3) {
+  animation: 3s ease-out 0s infinite normal none running test;
+}
+
+.button-container > div::before,
+.button-container div::after {
+  content: " ";
+  position: absolute;
+  top: 0px;
+  height: 100%;
+  width: 51%;
+  background: gray;
+}
+
+@keyframes test {
+  25% {
+    opacity: 1;
+  }
+
+  33% {
+    opacity: 1;
+    transform: translateY(8px);
+  }
+
+  67% {
+    opacity: 1;
+    transform: translateY(16px);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(24px) scale3d(0.5, 0.5, 0.5);
+  }
+}

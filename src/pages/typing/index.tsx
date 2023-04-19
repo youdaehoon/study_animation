@@ -4,6 +4,7 @@ import "./index.css";
 import First from "./first";
 import Second from "./second";
 import Third from "./third";
+import Four from "./four";
 
 const PageTyping = () => {
   return (
@@ -32,6 +33,7 @@ const PageTyping = () => {
         해당 class가 있는지 없는지 분기처리를 하지않아도 error를 뱉지않아
         분기처리 로직이 들어가지 않아도 되었기 때문에 쉽게 구현하였습니다.
       </h6>
+      <Four />
     </div>
   );
 };

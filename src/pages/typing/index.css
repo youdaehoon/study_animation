@@ -1,7 +1,7 @@
 .typing {
   font-size: 1rem;
   display: inline;
-
+  width: fit-content;
   /* border-right: 2px solid black; */
   animation: typingCursor 0.55s ease-in-out 0ms infinite;
 }
@@ -11,17 +11,17 @@
 }
 .magnify-1 {
   animation-name: magnify;
-  animation-duration: 0.9s;
+  animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
+  animation-iteration-count: 1;
   /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
   color: blue;
   display: inline-block;
 }
 .magnify {
   animation-name: magnify;
-  animation-duration: 0.9s;
+  animation-duration: 1s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
@@ -31,20 +31,26 @@
 }
 .zoom-out {
   animation-name: zoom_out;
-  animation-duration: 1s;
+  animation-duration: 0.9s;
   animation-delay: 0s;
   animation-fill-mode: forwards;
   animation-iteration-count: 1;
   /* animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1); */
-  color: blue;
+  color: red;
   display: inline-block;
 }
 @keyframes zoom_out {
   0% {
     transform: scale(1);
   }
+  90% {
+    transform: scale(0);
+    opacity: 1;
+  }
   100% {
     transform: scale(0);
+
+    opacity: 1;
   }
 }
 

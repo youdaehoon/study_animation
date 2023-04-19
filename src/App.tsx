@@ -7,6 +7,7 @@ import PageDropdown from "./pages/dropdown";
 import PageOnload from "./pages/onload";
 import PageObserver from "./pages/observer";
 import PageTyping from "./pages/typing";
+import PageButton from "./pages/button";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/onload" element={<PageOnload />} />
         <Route path="/observer" element={<PageObserver />} />
         <Route path="/typing" element={<PageTyping />} />
+        <Route path="/button" element={<PageButton />} />
       </Routes>
     </div>
   );
